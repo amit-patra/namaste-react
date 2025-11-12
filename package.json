@@ -1,0 +1,29 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "React application by Amit Patra",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amit-patra/namaste-react.git"
+  },
+  "keywords": [],
+  "author": "Amit Patra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amit-patra/namastedev-dsa/issues"
+  },
+  "homepage": "https://github.com/amit-patra/namastedev-dsa#readme",
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "browsersList": [
+    "last 3 versions"
+  ]
+}
