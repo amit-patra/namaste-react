@@ -1,39 +1,40 @@
 import React from "react";
-// import ReactDOM from "react-dom/client";
-import { createRoot } from "react-dom/client";
-/* 
- <div id="parent">
-    <div id="child1">
-    <h1>Hello from h1</h1>
-    <h2>Hello from h2</h2>
-    </div>
-    <div id="child2">
-    <h1>Hello from h1</h1>
-    <h2>Hello from h2</h2>
-    </div>
- </div>
+import ReactDOM from "react-dom/client";
+// import { createRoot } from "react-dom/client";
 
-  
+// const heading = React.createElement("h1", { id: "heading" }, "Hello React-1 🫵");
+// console.log(heading);
 
-*/
-const parent = React.createElement(
-  "div",
-  { id: "parent1" },
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", { key: "child1-h1-1" }, "Hello from h1"),
-    React.createElement("h1", { key: "child1-h1-2" }, "Hello from h1"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", { key: "child2-h1-1" }, "Hello from h1"),
-    React.createElement("h1", { key: "child2-h1-2" }, "Hello from h1"),
-  ])
+// *********** JSX ******************************
+// TODO: JSX (tranpiled before it reaches the JS ) - PARCEL - Babel
+// * JSX => Babel Transpile it to React.createElement => ReactElement-JS Object => HTMLElement(render)
+/*const jsxHeading = (
+  <h1 id="heading" className="hello-tag" tabIndex="1">
+    Hello React Using JSX 🫵
+  </h1>
+); */
+
+// React Functional Component (Which return JSX)
+const num = 150;
+const TitleComponent = <h1>This is TitleComponent ✌️ </h1>;
+const BodyComponent = () => <h1>This is body Component....</h1>;
+
+//* Component Composition ( Component Inside a component)
+const HeadingComponent = () => (
+  <div id="container">
+    {TitleComponent}
+
+    {/* Same Example (Various type of uses */}
+    {BodyComponent()}
+    <BodyComponent />
+    <BodyComponent></BodyComponent>
+
+    <h1>Count: {num + 50}</h1>
+    <h1 id="heading" className="hello-tag" tabIndex="1">
+      Hello This is Functional Component 🦖
+    </h1>
+  </div>
 );
-const heading = React.createElement(
-  "h1",
-  { id: "heading", xyz: "abc" },
-  "Hello from React!!!"
-);
-// console.log(parent);
 
-const root = createRoot(document.getElementById("root"));
-root.render(parent);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent />);
